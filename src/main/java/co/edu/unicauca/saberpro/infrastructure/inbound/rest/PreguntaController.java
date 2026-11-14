@@ -1,6 +1,6 @@
 package co.edu.unicauca.saberpro.infrastructure.inbound.rest;
 
-import co.edu.unicauca.saberpro.application.port.inbound.CrearPreguntaUseCase;
+import co.edu.unicauca.saberpro.domain.ports.inbound.CrearPreguntaUseCase;
 import co.edu.unicauca.saberpro.domain.model.Pregunta;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

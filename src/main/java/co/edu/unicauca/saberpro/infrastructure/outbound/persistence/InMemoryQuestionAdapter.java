@@ -1,6 +1,6 @@
 package co.edu.unicauca.saberpro.infrastructure.outbound.persistence;
 
-import co.edu.unicauca.saberpro.application.port.outbound.PreguntaRepositoryPort;
+import co.edu.unicauca.saberpro.domain.ports.outbound.PreguntaRepositoryPort;
 import co.edu.unicauca.saberpro.domain.model.Pregunta;
 import org.springframework.stereotype.Component;
 

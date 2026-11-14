@@ -15,5 +15,7 @@ co\edu\unicauca\saberpro\infrastructure\outbound\persistence\InMemoryQuestionAda
 co\edu\unicauca\saberpro\application\service\PreguntaApplicationService.class
 co\edu\unicauca\saberpro\infrastructure\inbound\rest\PreguntaController.class
 co\edu\unicauca\saberpro\infrastructure\outbound\persistence\SpringDataQuestionRepository.class
+co\edu\unicauca\saberpro\domain\ports\outbound\PreguntaRepositoryPort.class
 co\edu\unicauca\saberpro\domain\model\EstadoPregunta.class
+co\edu\unicauca\saberpro\domain\ports\inbound\CrearPreguntaUseCase.class
 co\edu\unicauca\saberpro\domain\valueobject\Justificacion.class

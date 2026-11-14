@@ -1,6 +1,6 @@
 package co.edu.unicauca.saberpro.infrastructure.outbound.persistence;
 
-import co.edu.unicauca.saberpro.application.port.outbound.PreguntaRepositoryPort;
+import co.edu.unicauca.saberpro.domain.ports.outbound.PreguntaRepositoryPort;
 import co.edu.unicauca.saberpro.domain.model.EstadoPregunta;
 import co.edu.unicauca.saberpro.domain.model.OpcionRespuesta;
 import co.edu.unicauca.saberpro.domain.model.Pregunta;
@@ -31,7 +31,6 @@ public class JpaQuestionAdapter implements PreguntaRepositoryPort {
         entity.setJustificacion(pregunta.getJustificacion().getTexto());
         entity.setEstado(pregunta.getEstado().name());
         
-        // Serialización básica de opciones para persistir en H2
         String opcionesSerialized = pregunta.getOpciones().stream()
                 .map(o -> o.getTexto() + "::" + o.isEsCorrecta())
                 .collect(Collectors.joining("||"));
@@ -58,9 +57,6 @@ public class JpaQuestionAdapter implements PreguntaRepositoryPort {
                 new Enunciado(entity.getEnunciado()),
                 new Justificacion(entity.getJustificacion())
         );
-        if (entity.getEstado().equals("PENDIENTE_REVISION")) {
-            // Restaurar estado si es necesario o manejar transiciones
-        }
         if (entity.getOpcionesJson() != null && !entity.getOpcionesJson().isEmpty()) {
             String[] opts = entity.getOpcionesJson().split("\\|\\|");
             for (String opt : opts) {

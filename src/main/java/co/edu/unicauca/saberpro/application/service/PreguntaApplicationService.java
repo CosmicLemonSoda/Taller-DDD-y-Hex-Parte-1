@@ -1,7 +1,7 @@
 package co.edu.unicauca.saberpro.application.service;
 
-import co.edu.unicauca.saberpro.application.port.inbound.CrearPreguntaUseCase;
-import co.edu.unicauca.saberpro.application.port.outbound.PreguntaRepositoryPort;
+import co.edu.unicauca.saberpro.domain.ports.inbound.CrearPreguntaUseCase;
+import co.edu.unicauca.saberpro.domain.ports.outbound.PreguntaRepositoryPort;
 import co.edu.unicauca.saberpro.domain.exception.ReglaNegocioException;
 import co.edu.unicauca.saberpro.domain.model.Pregunta;
 import co.edu.unicauca.saberpro.domain.valueobject.Enunciado;
